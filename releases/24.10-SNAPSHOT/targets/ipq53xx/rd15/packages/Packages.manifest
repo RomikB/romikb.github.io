@@ -21,7 +21,7 @@ Description:  Amnezia VPN — simple and free app to run a self-hosted VPN with
  `awg`, a netifd protocol helper, and a re-resolve watchdog script.
 
 Package: base-files
-Version: 1672~fc236f3b3c
+Version: 1672~3176eda56e
 Depends: libc, netifd, jsonfilter, usign, openwrt-keyring, ubi-utils, fstools, fwtool, procd, busybox
 Source: feeds/base/base-files
 SourceName: base-files
@@ -31,9 +31,9 @@ SourceDateEpoch: 1787218764
 URL: http://openwrt.org/
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 471040
-Filename: base-files_1672~fc236f3b3c_arm_cortex-a7_neon-vfpv4.ipk
-Size: 93428
-SHA256sum: 2ddbfb3339c4558df19d407c93236c22291e02a623ef6fd119b97ec7254dc014
+Filename: base-files_1672~3176eda56e_arm_cortex-a7_neon-vfpv4.ipk
+Size: 93922
+SHA256sum: d0cb6867dc0759c9a4d9f546f8d0eba58c16e3e81b51b51b7c3f7030612e72a1
 Description:  This package contains a base filesystem and system scripts for OpenWrt.
 
 Package: block-mount
@@ -836,12 +836,12 @@ Source: feeds/base/kernel/qca-nss-dp
 SourceName: qca-nss-dp
 License: ISC GPL-2.0
 Section: kernel
-SourceDateEpoch: 1789325426
+SourceDateEpoch: 1791387321
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 174080
 Filename: kmod-qca-nss-dp_5.4.213.2024.02.01~93102877-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 56237
-SHA256sum: 0b38c24b80a2ed23b23e11aa0ef9049b4c7219d7f65cec4454b0ac5fed2315c7
+Size: 56309
+SHA256sum: 05b63268469352541b3fef3233d48169e2dd6baab92bb22584a7f8dc5b41bda6
 Description:  Qualcomm NSS dataplane ethernet driver
 
 Package: kmod-qca-nss-ecm-premium
@@ -1047,12 +1047,12 @@ Source: feeds/base/kernel/qca-ssdk
 SourceName: qca-ssdk
 License: ISC GPL-2.0
 Section: kernel
-SourceDateEpoch: 1789629804
+SourceDateEpoch: 1791387321
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 1280000
 Filename: kmod-qca-ssdk-nohnat_5.4.213.2023.11.16~2e8bf996-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 412095
-SHA256sum: bf2fb0a4e412ffbd95ac30850a5cb4de42445aeb314824caae28ca07e6fe7a67
+Size: 412199
+SHA256sum: 3b997263048d88e443e3e211acfbadb861168fac7df8b3c71833ef207ee4522f
 Description:  Qualcomm SSDK switch driver (nohnat)
 
 Package: kmod-slhc
@@ -1182,12 +1182,12 @@ Source: feeds/base/kernel/yt-phy-driver
 SourceName: yt-phy-driver
 License: GPL-2.0+
 Section: kernel
-SourceDateEpoch: 1789308299
+SourceDateEpoch: 1791387321
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 20480
 Filename: kmod-yt-phy-driver_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 5147
-SHA256sum: 3b78f109fa60f60d60169cda9c561a91d36337fd0a8c76b37b2fcbb02586323b
+Size: 5113
+SHA256sum: 4df0cd10afc1b0ff864b2ce17182028a1e35c4accded064700f742d0a5fc0556
 Description:  Open-source PHYlib driver for Motorcomm YT8821 2.5Gbps Ethernet transceiver on Xiaomi Router BE3600 (RD15).
 
 Package: libatomic1
@@ -1270,7 +1270,7 @@ SHA256sum: f491a9cf6ca6846646ee6618fdd793635a4293020f958ea1512cb724776134f7
 Description:  POSIX.1b RealTime extension library
 
 Package: luci-app-podkop
-Version: 0.05102026-r1
+Version: 0.07102026-r1
 Depends: libc, luci-base, podkop
 Source: feeds/podkop/luci-app-podkop
 SourceName: luci-app-podkop
@@ -1281,9 +1281,9 @@ URL: https://github.com/openwrt/luci
 Maintainer: OpenWrt LuCI community
 Architecture: all
 Installed-Size: 143360
-Filename: luci-app-podkop_0.05102026-r1_all.ipk
-Size: 29341
-SHA256sum: bdefea3718c4f18d604b07091ace3c9c096509cf89ca3555dbe7164a525c3875
+Filename: luci-app-podkop_0.07102026-r1_all.ipk
+Size: 29342
+SHA256sum: 92240c66eeea178e032163adf91c8b71292157c3ab57b79f05a20afab8b7d264
 Description:  LuCI podkop app
 
 Package: luci-app-ruantiblock
@@ -1417,7 +1417,7 @@ SHA256sum: d21ba4a02574f4025fe9bdbd1bb6e1ba67ba9fde0c900fcc1f96c7390568142d
 Description:  Utilities for NAND devices.
 
 Package: podkop
-Version: 0.05102026-r1
+Version: 0.07102026-r1
 Depends: libc, sing-box, curl, jq, kmod-nft-tproxy, coreutils-base64, bind-dig
 Conflicts: https-dns-proxy, nextdns, luci-app-passwall, luci-app-passwall2
 Source: feeds/podkop/podkop
@@ -1429,9 +1429,9 @@ URL: https://podkop.net
 Maintainer: ITDog <podkop@itdog.info>
 Architecture: all
 Installed-Size: 204800
-Filename: podkop_0.05102026-r1_all.ipk
-Size: 35300
-SHA256sum: 5b5a4fd935db1878d1c7e25138ea54223684466bf746f95b99b7d89c2f7312e2
+Filename: podkop_0.07102026-r1_all.ipk
+Size: 35297
+SHA256sum: efac069346bbac16c3232af2ed888062e968b4df28fedbcb115d3f1e0b14afe5
 Description:  Domain routing. Use of VLESS, Shadowsocks technologies
 
 Package: qca-wifi-scripts
@@ -1463,6 +1463,22 @@ SHA256sum: 561aed174d2dbedb6b67a3ce08e39777a0897feed119cdd034555bdd09d10b86
 Description:  Developer configuration profile for Xiaomi Router BE3600 (RD15).
  Enables WAN management access (SSH, HTTP, HTTPS, iperf3), brings debugging utilities,
  and includes the QSDK vendor Wi-Fi standalone test runner (wifi-stock-test).
+
+Package: rd15-hwdiag
+Version: 1.0-r1
+Depends: libc
+Source: feeds/base/utils/rd15-hwdiag
+SourceName: rd15-hwdiag
+Section: utils
+SourceDateEpoch: 1791322527
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 30720
+Filename: rd15-hwdiag_1.0-r1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 5865
+SHA256sum: dd1be5790de110c4e70676e3ec265eceba391f8257547398b267ab965d237951
+Description:  Automatic hardware diagnostic and safety rollback tool for Xiaomi Router BE3600 (RD15).
+ Runs on startup, collects comprehensive system, network, switch, wireless, MDIO,
+ and PCIe diagnostics into /data, then safely reverts U-Boot rootfs boot slot and reboots.
 
 Package: ruantiblock
 Version: 2.1.12-r3
