@@ -16,16 +16,16 @@ Description:  Amnezia VPN — simple and free app to run a self-hosted VPN with
  `awg`, a netifd protocol helper, and a re-resolve watchdog script.
 
 Package: base-files
-Version: 1673~637eb9606c
+Version: 1673~fcc58f75b8
 Depends: libc, netifd, jsonfilter, usign, openwrt-keyring, ubi-utils, fstools, fwtool, procd, busybox
 License: GPL-2.0
 Section: base
 URL: http://openwrt.org/
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 368640
-Filename: base-files_1673~637eb9606c_arm_cortex-a7_neon-vfpv4.ipk
-Size: 73144
-SHA256sum: 665932876908ed5ea1f918cbb20a85364e1c90ae4688bf0ee1725271bff31919
+Filename: base-files_1673~fcc58f75b8_arm_cortex-a7_neon-vfpv4.ipk
+Size: 73225
+SHA256sum: 95cefcbf53a9b118099a6c746d3c1d2b499d2c28cbb24d257ada84790921fff7
 Description:  This package contains a base filesystem and system scripts for OpenWrt.
 
 Package: block-mount
@@ -65,8 +65,8 @@ URL: https://github.com/ushan0v/forkop
 Architecture: all
 Installed-Size: 1638400
 Filename: forkop_0.0.0_all.ipk
-Size: 278474
-SHA256sum: 0abda4d6eec1f155c3407823ba8e02f63a375638d1b2563b42ed8892bf5d3742
+Size: 278503
+SHA256sum: c7dd95c5e5867cc8033fae0602fa47764bc1e83fbea2eaa1b4385d62444b95cc
 Description:  Rule-based Forkop backend with hybrid sing-box + zapret orchestration
 
 Package: fstools
@@ -151,8 +151,8 @@ Section: kernel
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 153600
 Filename: kmod-amneziawg_5.4.213.3.1.20260906-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 60732
-SHA256sum: 6ee59862a425dd978471eb26c9f03c3ddd5b4c49967704209d6d0127a16f233d
+Size: 60728
+SHA256sum: 06be52b75a07c460c69c9a57110bc5b7f057a383a91d11e7438b616bd1fc1004
 Description:  AmneziaWG VPN Kernel Module
 
 Package: kmod-bonding
@@ -190,8 +190,8 @@ CPE-ID: cpe:/o:linux:linux_kernel
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 348160
 Filename: kmod-cfg80211-linux_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 145259
-SHA256sum: 21a4324a4373d8a867dda148bcac6db9bf81db24ffe47f79e4f0468c7484f8c7
+Size: 145155
+SHA256sum: 5a1c52168b7d29771d31eb3f9b0831814dcb8c86eb116e0d3835a16df25bf923
 Description:  cfg80211 is the Linux wireless LAN (802.11) configuration API.
 
 Package: kmod-crypto-crc32c
@@ -362,19 +362,6 @@ Size: 17251
 SHA256sum: 8ac08029693568084b2c42cf532a72ecfb01e6f9f2f6f1750c444132cc1e5978
 Description:  Kernel modules for L2TP V3 Support
 
-Package: kmod-lib-crc32c
-Version: 5.4.213-r1
-Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1), kmod-crypto-crc32c
-License: GPL-2.0-only
-Section: kernel
-CPE-ID: cpe:/o:linux:linux_kernel
-Architecture: arm_cortex-a7_neon-vfpv4
-Installed-Size: 10240
-Filename: kmod-lib-crc32c_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 975
-SHA256sum: 00a1702b1e54c36442b54d5bf28d5def279f0eb8d7c49db554a3093ea69cccc0
-Description:  Kernel module for CRC32 support
-
 Package: kmod-lib-crc-ccitt
 Version: 5.4.213-r1
 Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1)
@@ -387,6 +374,19 @@ Filename: kmod-lib-crc-ccitt_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
 Size: 2996
 SHA256sum: 518593fc793c34627573740a6997ab6e66246151ae2dae5e25179d821912f1fc
 Description:  Kernel module for CRC-CCITT support
+
+Package: kmod-lib-crc32c
+Version: 5.4.213-r1
+Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1), kmod-crypto-crc32c
+License: GPL-2.0-only
+Section: kernel
+CPE-ID: cpe:/o:linux:linux_kernel
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 10240
+Filename: kmod-lib-crc32c_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 975
+SHA256sum: 00a1702b1e54c36442b54d5bf28d5def279f0eb8d7c49db554a3093ea69cccc0
+Description:  Kernel module for CRC32 support
 
 Package: kmod-nat46
 Version: 5.4.213.2020.06.26~1182f307-r1
@@ -413,18 +413,19 @@ Size: 3354
 SHA256sum: abcef26c531dfc33aa839a697ab01dcaa43d21b4eb752b196d6778f32b021015
 Description:  Netlink diag is a module made for use with iproute2's ss utility
 
-Package: kmod-nf-conntrack
+Package: kmod-nf-conntrack-netlink
 Version: 5.4.213-r1
-Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1)
+Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1), kmod-nfnetlink, kmod-nf-conntrack
 License: GPL-2.0-only
 Section: kernel
 CPE-ID: cpe:/o:linux:linux_kernel
 Architecture: arm_cortex-a7_neon-vfpv4
-Installed-Size: 20480
-Filename: kmod-nf-conntrack_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 4526
-SHA256sum: 49ccd49364518e2c21062a43f93657e7aed7aabe042b399d344e531978862466
-Description:  Netfilter connection tracking
+Installed-Size: 10240
+Filename: kmod-nf-conntrack-netlink_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 1027
+SHA256sum: bb536e4fdf614dfdff842758c88f981e1341ec588e6c100b6e86150737bb32b1
+Description:  Kernel modules support for a netlink-based connection tracking
+ userspace interface
 
 Package: kmod-nf-conntrack6
 Version: 5.4.213-r1
@@ -439,19 +440,18 @@ Size: 885
 SHA256sum: d12537c8acb0c6e2b44ab01fb9238b8736d526bb19b6f5b3e23605db701ac184
 Description:  Netfilter IPv6 connection tracking
 
-Package: kmod-nf-conntrack-netlink
+Package: kmod-nf-conntrack
 Version: 5.4.213-r1
-Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1), kmod-nfnetlink, kmod-nf-conntrack
+Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1)
 License: GPL-2.0-only
 Section: kernel
 CPE-ID: cpe:/o:linux:linux_kernel
 Architecture: arm_cortex-a7_neon-vfpv4
-Installed-Size: 10240
-Filename: kmod-nf-conntrack-netlink_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 1027
-SHA256sum: bb536e4fdf614dfdff842758c88f981e1341ec588e6c100b6e86150737bb32b1
-Description:  Kernel modules support for a netlink-based connection tracking
- userspace interface
+Installed-Size: 20480
+Filename: kmod-nf-conntrack_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 4526
+SHA256sum: 49ccd49364518e2c21062a43f93657e7aed7aabe042b399d344e531978862466
+Description:  Netfilter connection tracking
 
 Package: kmod-nf-flow
 Version: 5.4.213-r1
@@ -479,19 +479,6 @@ Size: 18014
 SHA256sum: 0a9b6e8644e14b2a81b1765ccdfa5e87ee07d8a55c8d9e347bec3e014e3c0133
 Description:  Iptables core
 
-Package: kmod-nf-log
-Version: 5.4.213-r1
-Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1)
-License: GPL-2.0-only
-Section: kernel
-CPE-ID: cpe:/o:linux:linux_kernel
-Architecture: arm_cortex-a7_neon-vfpv4
-Installed-Size: 30720
-Filename: kmod-nf-log_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 6258
-SHA256sum: 3850e22a22b3f990a7e07311cfb4e9d34875d88a16877030ad9ef753443d9f86
-Description:  Netfilter Logging
-
 Package: kmod-nf-log6
 Version: 5.4.213-r1
 Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1), kmod-nf-log
@@ -504,6 +491,19 @@ Filename: kmod-nf-log6_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
 Size: 4300
 SHA256sum: 15ee031cff5188228b06c616e1bb598ce8cbee4a1df72873348a51a8c89417e9
 Description:  Netfilter IPV6 Logging
+
+Package: kmod-nf-log
+Version: 5.4.213-r1
+Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1)
+License: GPL-2.0-only
+Section: kernel
+CPE-ID: cpe:/o:linux:linux_kernel
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 30720
+Filename: kmod-nf-log_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 6258
+SHA256sum: 3850e22a22b3f990a7e07311cfb4e9d34875d88a16877030ad9ef753443d9f86
+Description:  Netfilter Logging
 
 Package: kmod-nf-nat
 Version: 5.4.213-r1
@@ -518,7 +518,20 @@ Size: 15206
 SHA256sum: bfd2afb14f9ba26f5c10e0bdbbcd46da5de80a95dbd86de9c90c40717f7c3afe
 Description:  Netfilter NAT
 
-Package: kmod-nfnetlink
+Package: kmod-nf-reject6
+Version: 5.4.213-r1
+Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1)
+License: GPL-2.0-only
+Section: kernel
+CPE-ID: cpe:/o:linux:linux_kernel
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 20480
+Filename: kmod-nf-reject6_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 4086
+SHA256sum: 5f02164f2c2fc610488742bdbd54997d5e36935bfa095f78dc1b815a07cabcb9
+Description:  Netfilter IPv6 reject support
+
+Package: kmod-nf-reject
 Version: 5.4.213-r1
 Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1)
 License: GPL-2.0-only
@@ -526,10 +539,36 @@ Section: kernel
 CPE-ID: cpe:/o:linux:linux_kernel
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 10240
-Filename: kmod-nfnetlink_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 891
-SHA256sum: 22c115f9c57a6054bfcdb5320ef906db3db1d114a4f78ddd133bb4b3591a2cac
-Description:  Kernel modules support for a netlink-based userspace interface
+Filename: kmod-nf-reject_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 3139
+SHA256sum: d8e74bda11d153f2c9434bd1f1379b1f30890eb5a5b3e6a168f1ca921a384e30
+Description:  Netfilter IPv4 reject support
+
+Package: kmod-nf-socket
+Version: 5.4.213-r1
+Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1)
+License: GPL-2.0-only
+Section: kernel
+CPE-ID: cpe:/o:linux:linux_kernel
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 20480
+Filename: kmod-nf-socket_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 3668
+SHA256sum: 1825b525a3bb09e392620e34a91960dcde23411f334284ae6e13777116c3fcd3
+Description:  Netfilter socket lookup support
+
+Package: kmod-nf-tproxy
+Version: 5.4.213-r1
+Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1)
+License: GPL-2.0-only
+Section: kernel
+CPE-ID: cpe:/o:linux:linux_kernel
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 20480
+Filename: kmod-nf-tproxy_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 4403
+SHA256sum: de872139d5eebced81def1614beb7ed1471c79300d545d558d87aa869197688a
+Description:  Netfilter tproxy support
 
 Package: kmod-nfnetlink-queue
 Version: 5.4.213-r1
@@ -546,7 +585,7 @@ Description:  Kernel modules support for queueing packets via NFNETLINK
  Includes:
  - NFQUEUE
 
-Package: kmod-nf-reject
+Package: kmod-nfnetlink
 Version: 5.4.213-r1
 Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1)
 License: GPL-2.0-only
@@ -554,36 +593,10 @@ Section: kernel
 CPE-ID: cpe:/o:linux:linux_kernel
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 10240
-Filename: kmod-nf-reject_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 3139
-SHA256sum: d8e74bda11d153f2c9434bd1f1379b1f30890eb5a5b3e6a168f1ca921a384e30
-Description:  Netfilter IPv4 reject support
-
-Package: kmod-nf-reject6
-Version: 5.4.213-r1
-Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1)
-License: GPL-2.0-only
-Section: kernel
-CPE-ID: cpe:/o:linux:linux_kernel
-Architecture: arm_cortex-a7_neon-vfpv4
-Installed-Size: 20480
-Filename: kmod-nf-reject6_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 4086
-SHA256sum: 5f02164f2c2fc610488742bdbd54997d5e36935bfa095f78dc1b815a07cabcb9
-Description:  Netfilter IPv6 reject support
-
-Package: kmod-nf-socket
-Version: 5.4.213-r1
-Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1)
-License: GPL-2.0-only
-Section: kernel
-CPE-ID: cpe:/o:linux:linux_kernel
-Architecture: arm_cortex-a7_neon-vfpv4
-Installed-Size: 20480
-Filename: kmod-nf-socket_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 3668
-SHA256sum: 1825b525a3bb09e392620e34a91960dcde23411f334284ae6e13777116c3fcd3
-Description:  Netfilter socket lookup support
+Filename: kmod-nfnetlink_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 891
+SHA256sum: 22c115f9c57a6054bfcdb5320ef906db3db1d114a4f78ddd133bb4b3591a2cac
+Description:  Kernel modules support for a netlink-based userspace interface
 
 Package: kmod-nft-bridge
 Version: 5.4.213-r1
@@ -662,19 +675,6 @@ Filename: kmod-nft-offload_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
 Size: 4340
 SHA256sum: 3fa8a1536142e90611d7fc4f30904b0b7725bf99dc279d766a66f0a270e3381b
 Description:  Netfilter nf_tables routing/NAT offload support
-
-Package: kmod-nf-tproxy
-Version: 5.4.213-r1
-Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1)
-License: GPL-2.0-only
-Section: kernel
-CPE-ID: cpe:/o:linux:linux_kernel
-Architecture: arm_cortex-a7_neon-vfpv4
-Installed-Size: 20480
-Filename: kmod-nf-tproxy_5.4.213-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 4403
-SHA256sum: de872139d5eebced81def1614beb7ed1471c79300d545d558d87aa869197688a
-Description:  Netfilter tproxy support
 
 Package: kmod-nft-queue
 Version: 5.4.213-r1
@@ -852,18 +852,6 @@ Size: 3547
 SHA256sum: 2e94c36366b2a0a949cb217563773ae7b9221f1290221f4991e0073c8e69f9a9
 Description:  QCA NSS ECM Wi-Fi plugin
 
-Package: kmod-qca-nss-ppe
-Version: 5.4.213.2024.01.19~0c6434d7-r1
-Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1), kmod-qca-ssdk-nohnat, kmod-nat46
-License: ISC GPL-2.0
-Section: kernel
-Architecture: arm_cortex-a7_neon-vfpv4
-Installed-Size: 593920
-Filename: kmod-qca-nss-ppe_5.4.213.2024.01.19~0c6434d7-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 179770
-SHA256sum: e8dd64189a8129e8be127c0dd6d64acca4fb05ff4e01f9c6abe840e0d8a0d711
-Description:  Kernel driver for PPE (core driver)
-
 Package: kmod-qca-nss-ppe-bridge-mgr
 Version: 5.4.213.2024.01.19~0c6434d7-r1
 Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1), kmod-qca-nss-ppe, kmod-qca-nss-ppe-vlan-mgr, kmod-bonding
@@ -872,8 +860,8 @@ Section: kernel
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 40960
 Filename: kmod-qca-nss-ppe-bridge-mgr_5.4.213.2024.01.19~0c6434d7-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 13320
-SHA256sum: e825e8cfa7c8311b40e2a1b3dd65bbf0dd28e36e24f54014fbf95048a76909a4
+Size: 13319
+SHA256sum: 5c10da69a10a9c5dca54d6037acd18b4c407a0b6a8a35677895ec35d7b4e187f
 Description:  Kernel driver for NSS PPE Bridge manager
 
 Package: kmod-qca-nss-ppe-ds
@@ -944,8 +932,8 @@ Section: kernel
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 61440
 Filename: kmod-qca-nss-ppe-vlan-mgr_5.4.213.2024.01.19~0c6434d7-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 18387
-SHA256sum: aed35a35428d8f4fbe2664361194c1303d4c1259bb7b64ce602f32703d083434
+Size: 18361
+SHA256sum: d3bcb613c986459a61500d3f3ad1d5438a1e7beb033cfde026fb9612ded5a0e0
 Description:  Kernel driver for NSS PPE VLAN manager
 
 Package: kmod-qca-nss-ppe-vp
@@ -968,9 +956,21 @@ Section: kernel
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 51200
 Filename: kmod-qca-nss-ppe-vxlanmgr_5.4.213.2024.01.19~0c6434d7-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 15204
-SHA256sum: a38a280ce07dfc3bd09b272ff102acbdadfcd10ef03777281b694b27309a0328
+Size: 15205
+SHA256sum: b2ab0addb1af81a8a9f803d2dd8a100e7a6347c364790f0aee45fc4889e7ec17
 Description:  Kernel driver for NSS PPE VxLAN manager
+
+Package: kmod-qca-nss-ppe
+Version: 5.4.213.2024.01.19~0c6434d7-r1
+Depends: kernel (=5.4.213~f6913cdd52e7be8b2ca18f3da4424e7c-r1), kmod-qca-ssdk-nohnat, kmod-nat46
+License: ISC GPL-2.0
+Section: kernel
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 593920
+Filename: kmod-qca-nss-ppe_5.4.213.2024.01.19~0c6434d7-r1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 179770
+SHA256sum: e8dd64189a8129e8be127c0dd6d64acca4fb05ff4e01f9c6abe840e0d8a0d711
+Description:  Kernel driver for PPE (core driver)
 
 Package: kmod-qca-nss-sfe
 Version: 5.4.213.2024.03.20~7d82c710-r1
@@ -992,8 +992,8 @@ Section: kernel
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 1280000
 Filename: kmod-qca-ssdk-nohnat_5.4.213.2023.11.16~2e8bf996-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 410885
-SHA256sum: 72075d2276c28e3a3b1080ef3e44d80833d2c433fc775007c8bb7a6296dff7e4
+Size: 412091
+SHA256sum: ad50621d4393f7667eea20da286a70782d59857457fbf7f9a12d8439f901fbfd
 Description:  Qualcomm SSDK switch driver (nohnat)
 
 Package: kmod-sched-cake
@@ -1161,6 +1161,22 @@ Size: 21695
 SHA256sum: 943c204796919db735bbc27e72841ca72589545dc76bed59e398abd68c14c13e
 Description:  GCC support library
 
+Package: libiptext-nft0
+Version: 1.8.10-r1
+Depends: libc, libxtables12
+Provides: libiptext-nft
+License: GPL-2.0
+Section: libs
+URL: https://netfilter.org/
+ABIVersion: 0
+CPE-ID: cpe:/a:netfilter:iptables
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 20480
+Filename: libiptext-nft0_1.8.10-r1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 3427
+SHA256sum: e496b4780ee521f0265ca013738570e7e3ea9a918d0a9e82fa6cd9372f5e44d5
+Description:  IPv4/IPv6 firewall - shared libiptext nft library
+
 Package: libiptext0
 Version: 1.8.10-r1
 Depends: libc, libxtables12
@@ -1192,22 +1208,6 @@ Filename: libiptext6-0_1.8.10-r1_arm_cortex-a7_neon-vfpv4.ipk
 Size: 4460
 SHA256sum: 6c839a8c87b2d18d50549775d33c66c0a7b69336f9911f4de0f2e85765f05a64
 Description:  IPv6 firewall - shared libiptext library
-
-Package: libiptext-nft0
-Version: 1.8.10-r1
-Depends: libc, libxtables12
-Provides: libiptext-nft
-License: GPL-2.0
-Section: libs
-URL: https://netfilter.org/
-ABIVersion: 0
-CPE-ID: cpe:/a:netfilter:iptables
-Architecture: arm_cortex-a7_neon-vfpv4
-Installed-Size: 20480
-Filename: libiptext-nft0_1.8.10-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 3427
-SHA256sum: e496b4780ee521f0265ca013738570e7e3ea9a918d0a9e82fa6cd9372f5e44d5
-Description:  IPv4/IPv6 firewall - shared libiptext nft library
 
 Package: libpthread
 Version: 1.2.5-r4
@@ -1265,20 +1265,20 @@ Architecture: all
 Installed-Size: 880640
 Filename: luci-app-forkop_0.0.0_all.ipk
 Size: 230083
-SHA256sum: c15f72b2dd857fc92fa984180718c3709deb6a50488a34318437807fd0606063
+SHA256sum: 475f9bc8d5aa32f44038d4e62de8d670c11b7cd497c249f06e01e7dfb0a92427
 Description:  Rule-based Forkop LuCI app with hybrid sing-box + zapret orchestration
 
 Package: luci-app-podkop
-Version: 0.25102026-r1
+Version: 0.26102026-r1
 Depends: libc, luci-base, podkop
 License: GPL-2.0-or-later
 Section: luci
 URL: https://github.com/openwrt/luci
 Architecture: all
 Installed-Size: 153600
-Filename: luci-app-podkop_0.25102026-r1_all.ipk
-Size: 30019
-SHA256sum: 2bf192ae879f77c92f796fab40ab2f535e1aa82241e8d34416d0cb69eaad9505
+Filename: luci-app-podkop_0.26102026-r1_all.ipk
+Size: 30022
+SHA256sum: a07c9caadeed2806ef732d410a762d482e1a641f84e35a2eecd430df49e61301
 Description:  LuCI podkop app
 
 Package: luci-app-ruantiblock
@@ -1307,15 +1307,15 @@ SHA256sum: da7e7472905fe86005e9c7e7dfe0aeeec9e482c5125296afaf903c74ae6a335d
 Description:  LuCI support for zapret2
 
 Package: luci-i18n-amneziawg-ru
-Version: 26.265.76648~59b5ec8
+Version: 26.265.63692~03b6226
 Depends: libc, luci-proto-amneziawg
 License: Apache-2.0
 Section: luci
 Architecture: all
 Installed-Size: 20480
-Filename: luci-i18n-amneziawg-ru_26.265.76648~59b5ec8_all.ipk
-Size: 4360
-SHA256sum: 17cafedb7b547fbdfb0a61c9c2a3d41365509d8e5844c8b00f2430659d27af4a
+Filename: luci-i18n-amneziawg-ru_26.265.63692~03b6226_all.ipk
+Size: 4358
+SHA256sum: e82853395abc1dcbaf30f4f84b3e0c0aec74296a3db99df324b5d024901be48b
 Description:  Translation for luci-proto-amneziawg - Русский (Russian)
 
 Package: luci-i18n-forkop-ru
@@ -1326,20 +1326,20 @@ Section: luci
 Architecture: all
 Installed-Size: 71680
 Filename: luci-i18n-forkop-ru_0.0.0_all.ipk
-Size: 19350
-SHA256sum: 896922649daae6b0f44e18580bc027d6524cdb7fcd7b929966aced3cf60c4b72
+Size: 19347
+SHA256sum: 2b2bdd68fc5f4d563938e860ec11b4d63411eca390d87be43cb5e0d961b861a7
 Description:  Translation for luci-app-forkop - Русский (Russian)
 
 Package: luci-i18n-podkop-ru
-Version: 26.297.51569~c654bf5
+Version: 26.283.07451~2b5d957
 Depends: libc, luci-app-podkop
 License: GPL-2.0-or-later
 Section: luci
 Architecture: all
 Installed-Size: 30720
-Filename: luci-i18n-podkop-ru_26.297.51569~c654bf5_all.ipk
-Size: 8568
-SHA256sum: 8ee04589fc2ea5d83bd0ffef7ac8f7c573bd27a2bdbcdfd8781e201ad77663a1
+Filename: luci-i18n-podkop-ru_26.283.07451~2b5d957_all.ipk
+Size: 8575
+SHA256sum: b4ef12ec0f779713f68811f12a2ecc0d1f333640ed5234e28d392b6c10172c13
 Description:  Translation for luci-app-podkop - Русский (Russian)
 
 Package: luci-i18n-ruantiblock-ru
@@ -1394,7 +1394,7 @@ SHA256sum: 4016db50d1837fdd5c6ccc7bdd4d6b9aada0359289737119fba6ad0a982f9291
 Description:  Utilities for NAND devices.
 
 Package: podkop
-Version: 0.25102026-r1
+Version: 0.26102026-r1
 Depends: libc, sing-box, curl, jq, kmod-nft-tproxy, coreutils-base64, bind-dig
 Conflicts: https-dns-proxy, nextdns, luci-app-passwall, luci-app-passwall2
 License: GPL-2.0-or-later
@@ -1402,9 +1402,9 @@ Section: net
 URL: https://podkop.net
 Architecture: all
 Installed-Size: 215040
-Filename: podkop_0.25102026-r1_all.ipk
+Filename: podkop_0.26102026-r1_all.ipk
 Size: 37122
-SHA256sum: a95492c371630dbee070b49e34f87ee1c5325f39f9e59c08af55cdbe297b5ceb
+SHA256sum: f3c07c11785bcd194ccc5b4f0884f336a1a29d43a321bbdbc9300ef51ff62009
 Description:  Domain routing. Use of VLESS, Shadowsocks technologies
 
 Package: qca-firmware-vendor-rd15
@@ -1414,8 +1414,8 @@ Section: vendor
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 15943680
 Filename: qca-firmware-vendor-rd15_0-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 6912445
-SHA256sum: 3e363e7dcaae0013d831da765d73c9515655c73179c41e41e763724f8b4b14fd
+Size: 6912419
+SHA256sum: 498cf6ddad0150ac4afa4a67ba383849cbf24004f860920223f2a8cdc288c835
 Description:  Prebuilt QCA Wi-Fi firmware and BDF calibration extracted from Xiaomi Router BE3600 (RD15) vendor firmware.
 
 Package: qca-firmware-vendor-rd16
@@ -1425,8 +1425,8 @@ Section: vendor
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 15943680
 Filename: qca-firmware-vendor-rd16_0-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 6912449
-SHA256sum: fdeb89950c76a7cd6512d11b341a03278c988aa656e7999671998ab92ae6e871
+Size: 6912405
+SHA256sum: 01f11072a70a71f03253d96b8661729b712692fd377b134117825803b41209fa
 Description:  Prebuilt QCA Wi-Fi firmware and BDF calibration extracted from Xiaomi Router BE3600 (RD16) vendor firmware.
 
 Package: qca-wifi-scripts
@@ -1453,18 +1453,6 @@ Description:  Developer configuration profile for Xiaomi Router BE3600 (RD15).
  Enables WAN management access (SSH, HTTP, HTTPS, iperf3), brings debugging utilities,
  and includes the QSDK vendor Wi-Fi standalone test runner (wifi-stock-test).
 
-Package: ruantiblock
-Version: 2.1.12-r3
-Depends: libc, dnsmasq-full, kmod-nft-tproxy
-Section: net
-URL: https://github.com/gSpotx2f/ruantiblock_openwrt
-Architecture: all
-Installed-Size: 143360
-Filename: ruantiblock_2.1.12-r3_all.ipk
-Size: 24281
-SHA256sum: f459b007fa06e59a2426f1838c395da69fdb3916accf875c156379fc3c5ac97f
-Description:  Ruantiblock
-
 Package: ruantiblock-mod-lua
 Version: 2.1.12-r3
 Depends: libc, ruantiblock, lua, luasocket, luasec, luabitop, iconv, idn
@@ -1476,6 +1464,18 @@ Filename: ruantiblock-mod-lua_2.1.12-r3_all.ipk
 Size: 13156
 SHA256sum: 766a13b1f44e1225a4ddd61bbb09e98f1bdb5190616b4b720482e34511d5be2d
 Description:  Lua module for ruantiblock
+
+Package: ruantiblock
+Version: 2.1.12-r3
+Depends: libc, dnsmasq-full, kmod-nft-tproxy
+Section: net
+URL: https://github.com/gSpotx2f/ruantiblock_openwrt
+Architecture: all
+Installed-Size: 143360
+Filename: ruantiblock_2.1.12-r3_all.ipk
+Size: 24281
+SHA256sum: f459b007fa06e59a2426f1838c395da69fdb3916accf875c156379fc3c5ac97f
+Description:  Ruantiblock
 
 Package: ubi-utils
 Version: 2.2.1-r2
@@ -1538,8 +1538,8 @@ URL: https://github.com/bol-van/zapret2
 Architecture: arm_cortex-a7_neon-vfpv4
 Installed-Size: 778240
 Filename: zapret2_0.9.20260307-r1_arm_cortex-a7_neon-vfpv4.ipk
-Size: 241105
-SHA256sum: 610cc44500f6bc2ec00f26f811794e3a0a438f1c20e942a0314d90cedd4dfa08
+Size: 241122
+SHA256sum: a9c535761d262fee929e4b93da71532dedaaa9c12bce0e8fb006f9768f0818d7
 Description:  zapret2
 
 
